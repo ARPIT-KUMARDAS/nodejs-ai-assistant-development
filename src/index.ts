@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // local dev
+      "http://localhost:8080", // local dev
       "https://ai-assistant-frontend.onrender.com", // deployed frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
