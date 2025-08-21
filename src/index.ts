@@ -7,7 +7,17 @@ import { apiKey, serverClient } from "./serverClient";
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+// app.use(cors({ origin: "*" }));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local dev
+      "https://ai-assistant-frontend.onrender.com", // deployed frontend
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 // Map to store the AI Agent instances
 // [user_id string]: AI Agent
