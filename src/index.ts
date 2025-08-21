@@ -10,12 +10,9 @@ app.use(express.json());
 // app.use(cors({ origin: "*" }));
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",           // local dev
-      "https://excellentmirror.com",     // ✅ your production frontend
-    ],
+    origin: "*", // ✅ any domain can access
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    credentials: true, // ❌ Note: credentials don't work with "*" 
   })
 );
 
