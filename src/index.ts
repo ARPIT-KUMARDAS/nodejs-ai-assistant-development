@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:8080", // local dev
-      "https://chat-ai-assistant-frontent.vercel.app", // deployed frontend
+      "http://localhost:5173",           // local dev
+      "https://excellentmirror.com",     // ✅ your production frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
