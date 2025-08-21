@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:8080", // local dev
-      "https://ai-assistant-frontend.onrender.com", // deployed frontend
+      "https://chat-ai-assistant-frontent.vercel.app", // deployed frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
